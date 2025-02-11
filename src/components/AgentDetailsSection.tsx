@@ -41,7 +41,7 @@ const AgentDetailsSection = () => {
                     {'\n  '}
                     <span className="text-blue-400">.aiService</span>
                     <span className="text-gray-400">(</span>
-                    <span className="text-green-400">"gcp"</span>
+                    <span className="text-green-400">"tenzro"</span>
                     <span className="text-gray-400">, </span>
                     <span className="text-green-400">"llama-32"</span>
                     <span className="text-gray-400">)</span>
