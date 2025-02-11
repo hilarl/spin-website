@@ -97,7 +97,7 @@ const ComedianShowcase = () => {
         }, 5000);
 
         return () => clearInterval(tweetTimer);
-    }, []);
+    }, [tweets.length]);
 
     return (
         <section className="py-12 md:py-24 relative overflow-hidden min-h-screen flex items-center">
