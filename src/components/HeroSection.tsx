@@ -87,7 +87,7 @@ const HeroSection = () => {
               className={`relative group ${index === 1 ? 'translate-y-12' : ''}`}
             >
               <Card className="bg-[#1a1a1a]/50 border-transparent backdrop-blur-sm rounded-2xl overflow-hidden hover:border-white/5 transition-all duration-300">
-                <CardContent className="p-6">
+                <CardContent className="p-3 md:p-6">
                   <div className="aspect-video rounded-lg overflow-hidden bg-black/20 mb-4 relative">
                     <Image
                       src={card.imageUrl}

@@ -44,19 +44,19 @@ const SpinProcess = () => {
       step: "01",
       title: "Create the Blueprint",
       icon: FileJson2,
-      description: "Define your agent's configuration using the lightweight SPIN Language. Specify models, data access patterns, and service integrations in a simple, declarative format."
+      description: "Define your agent's configuration using the lightweight SPIN Language.."
     },
     {
       step: "02",
       title: "Create Pipeline Chain",
       icon: GitBranch,
-      description: "Design your workflow pipeline, connecting models, services, and data processing steps. Chain together components to create complex, multi-step processes."
+      description: "Design your workflow pipeline, connecting models, services, and data processing steps."
     },
     {
       step: "03",
       title: "Containerize & Deploy",
       icon: Container,
-      description: "SPIN automatically containerizes your bytesized code and deploys it securely. Runs in isolated environments with dynamic scaling and edge computing capabilities."
+      description: "SPIN automatically containerizes your bytesized code and deploys it securely."
     },
     {
       step: "04",
