@@ -64,7 +64,7 @@ const HeroSection = () => {
             COMPUTER
           </span>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-            A computing platform for distributed intelligence—where tokenized agent can be run in secure environments.
+            A computing platform for distributed intelligence—where tokenized agents can be run in secure environments.
           </p>
           <div className="flex justify-center gap-4 pt-4">
             <Button
