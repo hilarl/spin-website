@@ -68,7 +68,7 @@ const HeroSection = () => {
           </p>
           <div className="flex justify-center gap-4 pt-4">
             <Button
-              className="bg-green-500/10 hover:bg-white/15 text-green-500 rounded-full px-6 py-5 md:px-8 md:py-6 text-base md:text-lg backdrop-blur-sm border border-green-500/15"
+              className="bg-green-500/10 hover:bg-green-500/20 text-green-500 rounded-full px-6 py-5 md:px-8 md:py-6 text-base md:text-lg backdrop-blur-sm border border-green-500/15"
               asChild
             >
               <Link href="/#agent-spin" className="text-green-100 font-thin leading-tight">Spin an Agent</Link>
