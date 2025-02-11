@@ -44,19 +44,19 @@ const SpinProcess = () => {
       step: "01",
       title: "Create the Blueprint",
       icon: FileJson2,
-      description: "Define your agent's configuration using the lightweight SPIN Language.."
+      description: "Define your agent's configuration using the lightweight SPIN Language. Specify models, data access patterns, and service integrations in a simple, declarative format."
     },
     {
       step: "02",
       title: "Create Pipeline Chain",
       icon: GitBranch,
-      description: "Design your workflow pipeline, connecting models, services, and data processing steps."
+      description: "Design your workflow pipeline, connecting models, services, and data processing steps. Chain together components to create complex, multi-step processes."
     },
     {
       step: "03",
       title: "Containerize & Deploy",
       icon: Container,
-      description: "SPIN automatically containerizes your bytesized code and deploys it securely."
+      description: "SPIN automatically containerizes your bytesized code and deploys it securely. Runs in isolated environments with dynamic scaling and edge computing capabilities."
     },
     {
       step: "04",
@@ -76,7 +76,7 @@ const SpinProcess = () => {
             className="space-y-4"
           >
             <h2 className="text-3xl font-medium text-gray-100">
-              Creating Agents on SPIN
+              Design Bespoke Agents
             </h2>
             <p className="text-gray-400 leading-relaxed">
               A simple four-step process to design, build, and deploy intelligent agents using SPIN Computer's

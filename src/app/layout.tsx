@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SPIN Computer",
-  description: "A computing platform for distributed intelligence—where tokenized agents can be run in secure environments.",
+  description: "A computing platform for distributed intelligence—where tokenized agent can be run in secure environments.",
 };
 
 export default function RootLayout({

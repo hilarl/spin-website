@@ -17,9 +17,9 @@ const AgentDetailsSection = () => {
           className="space-y-24"
         >
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <h2 className="text-3xl font-medium text-gray-100">Build Intelligent Agents</h2>
+            <h2 className="text-3xl font-medium text-gray-100">Chain-based Pipeline</h2>
             <p className="text-gray-400 leading-relaxed">
-              Leverage our secure environments and chain-based processing pipelines to deploy your agent blueprints. Our platform runs your bytesized code on a distributed, hardware-rooted system—ensuring secure, scalable, and efficient agent execution.
+              Use our secure environments and chain-based pipelines to deploy your agents.
             </p>
           </div>
 
@@ -62,7 +62,7 @@ const AgentDetailsSection = () => {
               <CardContent className="p-8 space-y-6">
                 <h3 className="text-xl font-medium text-gray-100">Custom Chaining</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Chain together your own logic using our chain-based processing pipelines—tailor your agent’s behavior to your unique domain.
+                  Chain together your own logic using our processing pipelines to tailor your agent’s behavior to your unique domain.
                 </p>
                 <div className="bg-[#141414] rounded-xl p-4 font-mono text-sm">
                   <pre className="whitespace-pre-wrap">
