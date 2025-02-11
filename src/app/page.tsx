@@ -16,8 +16,8 @@ export default function HomePage() {
     <div className="min-h-screen bg-[#141414] text-gray-100 antialiased">
       <HeroSection />
       <AgentStepsSection />
-      <AgentDetailsSection />
       <DataFlow />
+      <AgentDetailsSection />
       <AgentShowcase />
       <AgentTokenEconomySimulator />
       <SpinStudioSection />
