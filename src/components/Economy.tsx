@@ -1,3 +1,4 @@
+// Economy.tsx - Revised for Creative Asset Marketplace
 "use client";
 
 import React, { useState, useEffect, useMemo } from 'react';
@@ -20,72 +21,72 @@ const generateChartData = (initialPrice: number) => {
     }));
 };
 
-const AgentTokenEconomySimulator = () => {
+const Economy = () => {
     const [isClient, setIsClient] = useState(false);
 
     // Memoize initial state to prevent hydration issues
-    const initialEconomyState = useMemo(() => ({
-        pin: {
+    const initialMarketState = useMemo(() => ({
+        creative: {
             price: 8.06,
             marketCap: 93860000,
             circulatingSupply: 50000000,
-            totalAgents: 4,
+            totalAssets: 4,
             priceHistory: generateChartData(8.06)
         },
-        agents: [
+        assets: [
             {
-                id: 'data-analyst',
-                name: 'DataMind AI',
-                symbol: 'DMND',
-                description: 'Advanced data analysis and insights generation',
+                id: 'creative-profile',
+                name: 'StyleMatrix',
+                symbol: 'STMX',
+                description: 'Creative DNA and transferable style signature',
                 tokenPrice: 5.05,
                 marketCap: 525000,
-                interactions: 0,
-                specialty: 'Data Processing',
+                collaborations: 0,
+                specialty: 'Style Analysis',
                 icon: Database,
                 priceHistory: generateChartData(5.05)
             },
             {
-                id: 'content-creator',
-                name: 'CreativePen',
-                symbol: 'PENS',
-                description: 'AI-powered content creation and editing',
+                id: 'workflow-template',
+                name: 'ProcessFlow',
+                symbol: 'FLOW',
+                description: 'Modular creative production systems',
                 tokenPrice: 3.73,
                 marketCap: 281250,
-                interactions: 0,
-                specialty: 'Content Generation',
+                collaborations: 0,
+                specialty: 'Process Optimization',
                 icon: Cpu,
                 priceHistory: generateChartData(3.73)
             },
             {
-                id: 'research-assistant-1',
-                name: 'ScholArch',
-                symbol: 'ARCH',
-                description: 'Academic and scientific research support',
+                id: 'ai-module-1',
+                name: 'EmotionLens',
+                symbol: 'EMLN',
+                description: 'Emotional intelligence creative enhancement',
                 tokenPrice: 6.56,
                 marketCap: 375000,
-                interactions: 0,
-                specialty: 'Research Synthesis',
+                collaborations: 0,
+                specialty: 'Emotional Analysis',
                 icon: Network,
                 priceHistory: generateChartData(6.56)
             },
             {
-                id: 'research-assistant-2',
-                name: 'IntelliSync',
-                symbol: 'ISYN',
-                description: 'Intelligent system integration',
+                id: 'ai-module-2',
+                name: 'CultureMap',
+                symbol: 'CMAP',
+                description: 'Cultural context mapping system',
                 tokenPrice: 5.95,
                 marketCap: 322000,
-                interactions: 0,
-                specialty: 'System Coordination',
+                collaborations: 0,
+                specialty: 'Cultural Analysis',
                 icon: Network,
                 priceHistory: generateChartData(5.95)
             }
         ]
     }), []);
 
-    const [economyState, setEconomyState] = useState(initialEconomyState);
-    const [transactions, setTransactions] = useState<Array<{
+    const [marketState, setMarketState] = useState(initialMarketState);
+    const [collaborations, setCollaborations] = useState<Array<{
         from: string;
         to: string;
         amount: string;
@@ -97,39 +98,39 @@ const AgentTokenEconomySimulator = () => {
         setIsClient(true);
     }, []);
 
-    // Simulate economic interactions
+    // Simulate creative asset marketplace activity
     useEffect(() => {
         if (!isClient) return;
 
-        const simulateEconomicActivity = () => {
-            const newEconomyState = { ...economyState };
+        const simulateMarketActivity = () => {
+            const newMarketState = { ...marketState };
 
             // Simulate token price and market cap changes
-            const pinGrowthFactor = 1 + (Math.random() * 0.1 - 0.05);
-            newEconomyState.pin.price = Number((newEconomyState.pin.price * pinGrowthFactor).toFixed(2));
-            newEconomyState.pin.marketCap *= pinGrowthFactor;
+            const creativeGrowthFactor = 1 + (Math.random() * 0.1 - 0.05);
+            newMarketState.creative.price = Number((newMarketState.creative.price * creativeGrowthFactor).toFixed(2));
+            newMarketState.creative.marketCap *= creativeGrowthFactor;
 
             // Update price history
-            newEconomyState.pin.priceHistory = [
-                ...newEconomyState.pin.priceHistory.slice(1),
+            newMarketState.creative.priceHistory = [
+                ...newMarketState.creative.priceHistory.slice(1),
                 {
                     name: '',
-                    price: newEconomyState.pin.price
+                    price: newMarketState.creative.price
                 }
             ];
 
-            // Simulate agent token dynamics
-            newEconomyState.agents = newEconomyState.agents.map(agent => {
-                const agentGrowthFactor = 1 + (Math.random() * 0.1 - 0.05);
-                const newTokenPrice = Number((agent.tokenPrice * agentGrowthFactor).toFixed(2));
+            // Simulate asset token dynamics
+            newMarketState.assets = newMarketState.assets.map(asset => {
+                const assetGrowthFactor = 1 + (Math.random() * 0.1 - 0.05);
+                const newTokenPrice = Number((asset.tokenPrice * assetGrowthFactor).toFixed(2));
 
                 return {
-                    ...agent,
+                    ...asset,
                     tokenPrice: newTokenPrice,
-                    marketCap: agent.marketCap * agentGrowthFactor,
-                    interactions: Math.floor(Math.random() * 50),
+                    marketCap: asset.marketCap * assetGrowthFactor,
+                    collaborations: Math.floor(Math.random() * 50),
                     priceHistory: [
-                        ...agent.priceHistory.slice(1),
+                        ...asset.priceHistory.slice(1),
                         {
                             name: '',
                             price: newTokenPrice
@@ -138,24 +139,24 @@ const AgentTokenEconomySimulator = () => {
                 };
             });
 
-            // Generate a random transaction
-            const sourceAgent = newEconomyState.agents[Math.floor(Math.random() * newEconomyState.agents.length)];
-            const destinationAgent = newEconomyState.agents.find(a => a.id !== sourceAgent.id) || newEconomyState.agents[0];
+            // Generate a random collaboration
+            const sourceAsset = newMarketState.assets[Math.floor(Math.random() * newMarketState.assets.length)];
+            const destinationAsset = newMarketState.assets.find(a => a.id !== sourceAsset.id) || newMarketState.assets[0];
 
-            const newTransaction = {
-                from: sourceAgent.symbol,
-                to: destinationAgent.symbol,
+            const newCollaboration = {
+                from: sourceAsset.symbol,
+                to: destinationAsset.symbol,
                 amount: (Math.random() * 100).toFixed(2),
                 timestamp: new Date().toLocaleTimeString()
             };
 
-            setTransactions(prev => [newTransaction, ...prev].slice(0, 5));
-            setEconomyState(newEconomyState);
+            setCollaborations(prev => [newCollaboration, ...prev].slice(0, 5));
+            setMarketState(newMarketState);
         };
 
-        const interval = setInterval(simulateEconomicActivity, 3000);
+        const interval = setInterval(simulateMarketActivity, 3000);
         return () => clearInterval(interval);
-    }, [isClient, economyState]);
+    }, [isClient, marketState]);
 
     if (!isClient) {
         return null;
@@ -187,13 +188,13 @@ const AgentTokenEconomySimulator = () => {
                 <div className="space-y-8 max-w-7xl mx-auto">
 
                     <div className="text-center max-w-3xl mx-auto space-y-4 mb-24">
-                        <h2 className="text-3xl font-medium text-gray-100">SPIN Exchange</h2>
+                        <h2 className="text-3xl font-medium text-gray-100">Creative Asset Marketplace</h2>
                         <p className="text-gray-400 leading-relaxed">
-                            Explore our secure marketplace for trading agent credits—fueling distributed intelligence with a fair, integrated economic system.
+                            Explore our revolutionary marketplace for creative digital assets—enabling transparent collaboration, fair attribution, and monetization of creative processes.
                         </p>
                     </div>
 
-                    {/* Economy Overview */}
+                    {/* Marketplace Overview */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -201,15 +202,15 @@ const AgentTokenEconomySimulator = () => {
                     >
                         <Card className="bg-[#1a1a1a]/50 border-transparent backdrop-blur-sm rounded-2xl overflow-hidden">
                             <CardHeader>
-                                <CardTitle className="text-gray-100">$PIN Economy Overview</CardTitle>
+                                <CardTitle className="text-gray-100">Creative Economy Overview</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <div className="grid md:grid-cols-4 gap-4">
                                     {[
-                                        { label: "Total Market Cap", value: `$${(economyState.pin.marketCap / 1000000).toFixed(2)}M` },
-                                        { label: "Circulating Supply", value: `${(economyState.pin.circulatingSupply / 1000000).toFixed(2)}M` },
-                                        { label: "Total Agents", value: economyState.agents.length },
-                                        { label: "Avg Token Price", value: `$${economyState.pin.price.toFixed(2)}` }
+                                        { label: "Total Market Cap", value: `$${(marketState.creative.marketCap / 1000000).toFixed(2)}M` },
+                                        { label: "Asset Types", value: `${(marketState.creative.circulatingSupply / 1000000).toFixed(2)}M` },
+                                        { label: "Creative Assets", value: marketState.assets.length },
+                                        { label: "Avg Asset Value", value: `$${marketState.creative.price.toFixed(2)}` }
                                     ].map((item, index) => (
                                         <div key={index}>
                                             <div className="text-sm text-gray-400">{item.label}</div>
@@ -223,11 +224,11 @@ const AgentTokenEconomySimulator = () => {
 
                     {/* Main Grid */}
                     <div className="grid md:grid-cols-3 gap-6 md:h-[476px]">
-                        {/* Left Agent Tokens Column */}
+                        {/* Left Asset Column */}
                         <div className="md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-6 h-full">
-                            {economyState.agents.slice(0, 2).map((agent, index) => (
+                            {marketState.assets.slice(0, 2).map((asset, index) => (
                                 <motion.div
-                                    key={agent.id}
+                                    key={asset.id}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.3 + (index * 0.1) }}
@@ -235,13 +236,13 @@ const AgentTokenEconomySimulator = () => {
                                 >
                                     <Card className="bg-[#1a1a1a]/50 border-transparent backdrop-blur-sm rounded-2xl overflow-hidden hover:border-white/5 transition-all duration-300 h-full">
                                         <CardHeader className="flex flex-row items-center justify-between">
-                                            <CardTitle className="text-gray-100 hidden md:block">{agent.name}</CardTitle>
-                                            <Badge variant="secondary">{agent.symbol}</Badge>
+                                            <CardTitle className="text-gray-100 hidden md:block">{asset.name}</CardTitle>
+                                            <Badge variant="secondary">{asset.symbol}</Badge>
                                         </CardHeader>
                                         <CardContent className="flex flex-col justify-between h-full">
-                                            <div className="text-2xl font-medium text-gray-100">${agent.tokenPrice.toFixed(2)}</div>
+                                            <div className="text-2xl font-medium text-gray-100">${asset.tokenPrice.toFixed(2)}</div>
                                             <ResponsiveContainer width="100%" height={100}>
-                                                <LineChart data={agent.priceHistory}>
+                                                <LineChart data={asset.priceHistory}>
                                                     <Line
                                                         type="monotone"
                                                         dataKey="price"
@@ -271,7 +272,7 @@ const AgentTokenEconomySimulator = () => {
                             ))}
                         </div>
 
-                        {/* Central $PIN Token */}
+                        {/* Central Creative Token */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -280,13 +281,13 @@ const AgentTokenEconomySimulator = () => {
                         >
                             <Card className="bg-[#1a1a1a]/50 border-transparent backdrop-blur-sm rounded-2xl overflow-hidden hover:border-white/5 transition-all duration-300 w-full">
                                 <CardHeader className="flex flex-row items-center justify-between">
-                                    <CardTitle className="text-gray-100">$PIN</CardTitle>
+                                    <CardTitle className="text-gray-100">Creative DNA</CardTitle>
                                     <Badge variant="default">Core</Badge>
                                 </CardHeader>
                                 <CardContent className="flex flex-col justify-between h-full">
-                                    <div className="text-3xl font-medium text-gray-100">${economyState.pin.price.toFixed(2)}</div>
+                                    <div className="text-3xl font-medium text-gray-100">${marketState.creative.price.toFixed(2)}</div>
                                     <ResponsiveContainer width="100%" height={200}>
-                                        <LineChart data={economyState.pin.priceHistory}>
+                                        <LineChart data={marketState.creative.priceHistory}>
                                             <Line
                                                 type="monotone"
                                                 dataKey="price"
@@ -314,11 +315,11 @@ const AgentTokenEconomySimulator = () => {
                             </Card>
                         </motion.div>
 
-                        {/* Right Agent Tokens Column */}
+                        {/* Right Asset Column */}
                         <div className="md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-6 h-full">
-                            {economyState.agents.slice(2).map((agent, index) => (
+                            {marketState.assets.slice(2).map((asset, index) => (
                                 <motion.div
-                                    key={agent.id}
+                                    key={asset.id}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5 + (index * 0.1) }}
@@ -326,13 +327,13 @@ const AgentTokenEconomySimulator = () => {
                                 >
                                     <Card className="bg-[#1a1a1a]/50 border-transparent backdrop-blur-sm rounded-2xl overflow-hidden hover:border-white/5 transition-all duration-300 h-full">
                                         <CardHeader className="flex flex-row items-center justify-between">
-                                            <CardTitle className="text-gray-100 hidden md:block">{agent.name}</CardTitle>
-                                            <Badge variant="secondary">{agent.symbol}</Badge>
+                                            <CardTitle className="text-gray-100 hidden md:block">{asset.name}</CardTitle>
+                                            <Badge variant="secondary">{asset.symbol}</Badge>
                                         </CardHeader>
                                         <CardContent className="flex flex-col justify-between h-full">
-                                            <div className="text-2xl font-medium text-gray-100">${agent.tokenPrice.toFixed(2)}</div>
+                                            <div className="text-2xl font-medium text-gray-100">${asset.tokenPrice.toFixed(2)}</div>
                                             <ResponsiveContainer width="100%" height={100}>
-                                                <LineChart data={agent.priceHistory}>
+                                                <LineChart data={asset.priceHistory}>
                                                     <Line
                                                         type="monotone"
                                                         dataKey="price"
@@ -363,7 +364,7 @@ const AgentTokenEconomySimulator = () => {
                         </div>
                     </div>
 
-                    {/* Transactions Log */}
+                    {/* Collaboration Log */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -371,12 +372,12 @@ const AgentTokenEconomySimulator = () => {
                     >
                         <Card className="bg-[#1a1a1a]/50 border-transparent backdrop-blur-sm rounded-2xl overflow-hidden hover:border-white/5 transition-all duration-300">
                             <CardHeader>
-                                <CardTitle className="text-gray-100">Recent Interactions</CardTitle>
+                                <CardTitle className="text-gray-100">Recent Collaborations</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <div className="space-y-2">
                                     <AnimatePresence>
-                                        {transactions.map((transaction, index) => (
+                                        {collaborations.map((collaboration, index) => (
                                             <motion.div
                                                 key={index}
                                                 initial={{ opacity: 0, x: -20 }}
@@ -385,12 +386,12 @@ const AgentTokenEconomySimulator = () => {
                                                 className="flex items-center justify-between bg-black/20 p-3 rounded-lg hover:bg-black/30 transition-all duration-300"
                                             >
                                                 <div>
-                                                    <span className="font-medium text-gray-100">{transaction.from}</span>
+                                                    <span className="font-medium text-gray-100">{collaboration.from}</span>
                                                     <ArrowRight className="inline w-4 h-4 mx-2 text-gray-400" />
-                                                    <span className="font-medium text-gray-100">{transaction.to}</span>
+                                                    <span className="font-medium text-gray-100">{collaboration.to}</span>
                                                 </div>
                                                 <div className="text-sm text-gray-400">
-                                                    {transaction.amount} $PIN
+                                                    {collaboration.amount} Credits
                                                 </div>
                                             </motion.div>
                                         ))}
@@ -405,4 +406,4 @@ const AgentTokenEconomySimulator = () => {
     );
 };
 
-export default AgentTokenEconomySimulator;
+export default Economy;

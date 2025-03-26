@@ -1,3 +1,4 @@
+// HeroSection.tsx
 "use client";
 
 import React from 'react';
@@ -9,20 +10,20 @@ import Link from 'next/link';
 
 const featureCards = [
   {
-    title: "Broad AI Compatibility",
-    description: "Effortlessly connect and use the most powerful models available today.",
+    title: "Multimodal Embedding",
+    description: "Transform creative inputs into high-dimensional semantic representations across visual, audio, and textual domains.",
     imageUrl: "/ai-logos.png",
     delay: 0.2
   },
   {
-    title: "Agentic Credits",
-    description: "Fuel innovation with our AI backed token economy on a hardware-rooted distributed ledger system.",
+    title: "Creative Intelligence Protocol",
+    description: "Leverage our collaborative intelligence framework with advanced creative attribution mechanisms.",
     imageUrl: "/tokens.png",
     delay: 0.3
   },
   {
-    title: "No-Code Pipeline",
-    description: "Launch custom agents without writing a single line of code.",
+    title: "Cultural Context Analysis",
+    description: "Understand the complex web of cultural, historical, and emotional contexts that influence creative work.",
     imageUrl: "/dsl.png",
     delay: 0.4
   }
@@ -64,7 +65,10 @@ const HeroSection = () => {
             COMPUTER
           </span>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-            A computing platform for distributed intelligence—where tokenized agents can be run in secure environments.
+          A platform that transforms
+creativity from a linear process to a dynamic,
+interconnected ecosystem of human and
+artificial intelligence.
           </p>
           <div className="flex justify-center gap-4 pt-4">
             <Button

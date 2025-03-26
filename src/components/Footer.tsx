@@ -9,8 +9,8 @@ const Footer = () => {
       <div className="container mx-auto px-6">
           <div className="text-sm text-gray-400">© 2025 SPIN Platform. All rights reserved.</div>
           <div className="space-x-6">
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors"></a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors"></a>
           </div>
       </div>
     </footer>

@@ -1,4 +1,4 @@
-// components/IntegrationToolsSection.tsx
+// IntegrationToolsSection.tsx
 "use client";
 
 import React from 'react';
@@ -8,19 +8,19 @@ import { Card, CardContent } from '@/components/ui/card';
 const IntegrationToolsSection = () => {
   const integrations = [
     {
-      title: "External APIs",
-      description: "Connect with any API or custom protocol for endless integration possibilities.",
-      features: ["Robust authentication", "Efficient request handling", "Smart caching", "Seamless data flow"]
+      title: "Creative APIs",
+      description: "Connect with specialized creative services for enhanced generation and analysis capabilities.",
+      features: ["Authentication framework", "Style transfer protocols", "Creative dataset access", "Attribution tracking"]
     },
     {
-      title: "Real-time Search",
-      description: "Leverage live data streams to deliver up-to-date insights in real time.",
-      features: ["Multi-source aggregation", "Smart filtering", "Instant updates", "Accurate results"]
+      title: "Cultural Context Engine",
+      description: "Access real-time cultural context data to enhance creative works with relevant references and associations.",
+      features: ["Temporal mapping", "Geographical context", "Social dynamics", "Cultural trends analysis"]
     },
     {
-      title: "Platform Deployment",
-      description: "Deploy your agents as bots on popular platforms like Discord, Slack, or Telegram with ease.",
-      features: ["Cross-platform compatibility", "User-friendly setup", "Customizable interfaces", "Streamlined integration"]
+      title: "Collaboration Networks",
+      description: "Deploy your creative assets into collaborative networks that track attribution and manage revenue sharing.",
+      features: ["Transparent contribution metrics", "Derivative work lineage", "Revenue distribution", "IP protection"]
     }
   ];
 
@@ -29,9 +29,9 @@ const IntegrationToolsSection = () => {
       <div className="container mx-auto px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="space-y-24">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <h2 className="text-3xl font-medium text-gray-100">Integration & Deployment</h2>
+            <h2 className="text-3xl font-medium text-gray-100">Creative Integration & Collaboration</h2>
             <p className="text-gray-400 leading-relaxed">
-              Easily connect your agents to any system and deploy them across platforms—from web apps to messaging bots—bringing distributed intelligence wherever you need it.
+              Connect your creative process with specialized tools, cultural context engines, and collaborative networks—enabling rich, contextually-aware creative works.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -57,5 +57,6 @@ const IntegrationToolsSection = () => {
     </section>
   );
 };
+
 
 export default IntegrationToolsSection;

@@ -1,4 +1,4 @@
-// components/CustomInterfacesSection.tsx
+// CustomInterfacesSection.tsx
 "use client";
 
 import React from 'react';
@@ -8,28 +8,28 @@ import { Card, CardContent } from '@/components/ui/card';
 const CustomInterfacesSection = () => {
   const interfaces = [
     {
-      title: "Chat Interface",
-      description: "Experience natural conversations with agents that remember context and evolve over time.",
+      title: "Creative Profiling",
+      description: "Analyze your unique creative signature and develop mathematical representations of your style.",
       image: "/api/placeholder/600/400",
-      features: ["Message threading", "Rich media support", "User authentication", "Conversation history"]
+      features: ["Style extraction", "Technique classification", "Influence mapping", "Quality benchmarking"]
     },
     {
-      title: "Prompt Interface",
-      description: "Receive clear, structured responses with enhanced processing and output formatting.",
+      title: "Contextual Generation",
+      description: "Generate content that respects cultural context, emotional nuance, and creative lineage.",
       image: "/api/placeholder/600/400",
-      features: ["Template system", "Variable handling", "Validation rules", "Clear output formatting"]
+      features: ["Cultural awareness", "Emotional intelligence", "Style consistency", "Novel combinations"]
     },
     {
-      title: "Feed Interface",
-      description: "Stay informed with real-time content streams that adjust to your interests.",
+      title: "Collaborative Creation",
+      description: "Work alongside the AI in real-time, with transparent contribution tracking and attribution.",
       image: "/api/placeholder/600/400",
-      features: ["Live updates", "Content categorization", "Custom layouts", "Interactive elements"]
+      features: ["Real-time feedback", "Contribution metrics", "Creative exploration", "Attribution tracking"]
     },
     {
-      title: "Bot Interface",
-      description: "Automate interactions and tasks with bots that integrate seamlessly across platforms.",
+      title: "Asset Management",
+      description: "Manage your creative assets through our tokenized system with intellectual property protection.",
       image: "/api/placeholder/600/400",
-      features: ["Command system", "Event handling", "Platform adaptation", "Performance analytics"]
+      features: ["Creative lineage", "IP protection", "Revenue tracking", "Derivative works"]
     }
   ];
 
@@ -38,9 +38,9 @@ const CustomInterfacesSection = () => {
       <div className="container mx-auto px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="space-y-24">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <h2 className="text-3xl font-medium text-gray-100">Custom Interfaces</h2>
+            <h2 className="text-3xl font-medium text-gray-100">Creative Intelligence Interfaces</h2>
             <p className="text-gray-400 leading-relaxed">
-              Choose from a range of interfaces to interact with your agents—whether it&apos;s a conversational chat, a structured prompt, a live feed, or an automated bot.
+              Access SPIN Computer's creative intelligence through specialized interfaces designed for different creative workflows and objectives.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8">

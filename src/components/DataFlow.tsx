@@ -1,3 +1,4 @@
+// DataFlow.tsx
 "use client";
 
 import React from 'react';
@@ -7,32 +8,32 @@ import { motion } from 'framer-motion';
 
 const workflowCards = [
   {
-    title: "Data Ingestion",
-    description: "Use existing proprietary data in various file formats to build a custom knowledge base.",
+    title: "Multimodal Processing",
+    description: "Process various creative inputs—visual, audio, textual—through specialized encoders for dimensional analysis.",
     imageUrl: "/file.png",
     delay: 0.2
   },
   {
-    title: "Vector Embeddings",
-    description: "Transform data into a high-dimensional format machines understand, to provide context for AI.",
+    title: "Semantic Embedding",
+    description: "Transform creative content into high-dimensional vector embeddings that capture stylistic and semantic essence.",
     imageUrl: "/vectors.png",
     delay: 0.3
   },
   {
-    title: "Integrations",
-    description: "Enhance agent responses by combining real-time internet sources with external API services.",
+    title: "Cultural Context",
+    description: "Enrich creative analysis with cultural, historical, and emotional context from our knowledge graph system.",
     imageUrl: "/integrations.png",
     delay: 0.4
   },
   {
-    title: "Model Library",
-    description: "Choose from a collection of pre-trained AI models of choice from our Model Library.",
+    title: "Creative Exploration",
+    description: "Generate variations and new content with our generative models enhanced by emotional intelligence and contextual awareness.",
     imageUrl: "/ai-logos.png",
     delay: 0.5
   }
 ];
 
-const DataWorkflowSection = () => {
+const DataFlow = () => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden py-24">
       {/* Background Effects */}
@@ -58,7 +59,7 @@ const DataWorkflowSection = () => {
           className="text-center space-y-8 max-w-4xl mx-auto mb-20"
         >
           <h2 className="text-3xl p-0 md:text-3xl font-medium mb-0 tracking-tight text-gray-50">
-            Powered by Your Data
+            Creative Intelligence Pipeline
           </h2>
         </motion.div>
 
@@ -97,4 +98,4 @@ const DataWorkflowSection = () => {
   );
 };
 
-export default DataWorkflowSection;
+export default DataFlow;

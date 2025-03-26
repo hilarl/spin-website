@@ -1,4 +1,4 @@
-// components/FeaturesTabsSection.tsx
+// FeaturesTabsSection.tsx
 "use client";
 
 import React, { useState } from 'react';
@@ -8,68 +8,68 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Bot, Brain, Code, Database, GitBranch, Sparkles } from 'lucide-react';
 
 const sections = {
-  framework: {
-    title: "Agent-based Computing",
-    description: "Build intelligent agents using agent blueprints defined in bytesized code. Our distributed agent-based computing system deploys your agent blueprints into secure environments for running the code—enabling them to think, learn, and interact seamlessly.",
+  embedding: {
+    title: "Multimodal Embedding Framework",
+    description: "Transform creative inputs into high-dimensional semantic representations that capture the essence of style, context, and meaning across different modalities.",
     features: [
       {
         icon: <Code className="h-6 w-6 text-green-500/90" />,
-        title: "Domain Specific Language",
-        description: "Define agent blueprints in just a few lines of bytesized code—clear, concise, and secure."
+        title: "Cross-modal Translation",
+        description: "Seamlessly translate between visual, audio, and textual representations with contextual understanding."
       },
       {
         icon: <GitBranch className="h-6 w-6 text-green-500/90" />,
-        title: "Custom Chaining",
-        description: "Easily build chain-based processing pipelines to customize your agent’s behavior."
+        title: "Dimensional Richness",
+        description: "2048-4096 dimensional embeddings capture subtle nuances of creative expression and style."
       },
       {
         icon: <Bot className="h-6 w-6 text-green-500/90" />,
-        title: "Dynamic Interfaces",
-        description: "Interact with your agents through chat, prompts, feeds, or bots—all integrated into a distributed system."
+        title: "Dynamic Adaptation",
+        description: "Context-aware embeddings that adapt to cultural and temporal shifts in creative meaning."
       }
     ]
   },
-  credits: {
-    title: "Integrated Economic Model",
-    description: "Our token economy is powered by a hardware-rooted distributed ledger system. This ensures that every agent blueprint receives fair value through native tokens, dynamic pricing, and automated market making.",
+  knowledge: {
+    title: "Knowledge Representation Systems",
+    description: "Our graph-based knowledge architecture maps complex relationships between creative elements, cultural contexts, and historical influences.",
     features: [
       {
         icon: <Database className="h-6 w-6 text-green-500/90" />,
-        title: "Agent Credits",
-        description: "Every agent blueprint runs on its own token, ensuring transparent value and efficient resource allocation."
+        title: "Cultural Knowledge Graph",
+        description: "Neo4j-based mapping of artistic movements, influences, and cultural significance."
       },
       {
         icon: <Sparkles className="h-6 w-6 text-green-500/90" />,
-        title: "Market Making",
-        description: "Seamlessly swap and trade tokens as demand shifts, driving a vibrant token economy."
+        title: "Dynamic Relationship Modeling",
+        description: "Constantly evolving connections between creative elements based on new discoveries."
       },
       {
         icon: <Brain className="h-6 w-6 text-green-500/90" />,
-        title: "Fair Pricing",
-        description: "Real-time adjustments maintain a balanced value exchange across the system."
+        title: "Contextual Inference",
+        description: "Real-time analysis of creative works within their proper historical and cultural context."
       }
     ]
   },
-  development: {
-    title: "Developer Experience",
-    description: "Power your creativity with our robust toolkit and comprehensive documentation. Our platform provides everything you need—from intuitive interfaces to in-depth technical components—to build, test, and deploy your intelligent agent blueprints.",
+  creative: {
+    title: "Creative Intelligence",
+    description: "Our predictive and generative models incorporate psychological profiling, cultural understanding, and emotional intelligence for truly contextual creation.",
     features: [
       {
-        title: "Core Components",
+        title: "Psychological Profiling",
         items: [
-          "Modern Next.js Frontend",
-          "Type-safe Prisma ORM",
-          "Real-time Redis features",
-          "Powerful GraphQL API"
+          "Innovation scoring algorithms",
+          "Emotional depth assessment",
+          "Creative motivation analysis",
+          "Style signature mapping"
         ]
       },
       {
-        title: "Tools & Services",
+        title: "Generative Capabilities",
         items: [
-          "Custom agent creation toolkit",
-          "Credit and portfolio management",
-          "Live market data feeds",
-          "Integration with top AI providers"
+          "Contextual image generation",
+          "Narrative composition with emotional subtext",
+          "Audio generation with compositional narrative",
+          "Dynamic creative constraint satisfaction"
         ]
       }
     ]
@@ -77,12 +77,12 @@ const sections = {
 };
 
 const FeaturesTabsSection = () => {
-  const [activeSection, setActiveSection] = useState('framework');
+  const [activeSection, setActiveSection] = useState('embedding');
 
   return (
     <section className="py-32 relative">
       <div className="container mx-auto px-6">
-        <Tabs defaultValue="framework" value={activeSection} onValueChange={setActiveSection} className="space-y-16">
+        <Tabs defaultValue="embedding" value={activeSection} onValueChange={setActiveSection} className="space-y-16">
           <div className="flex justify-center">
             <TabsList className="bg-[#1a1a1a]/50 border border-white/5 backdrop-blur-sm rounded-full p-1">
               {Object.keys(sections).map((tab) => (

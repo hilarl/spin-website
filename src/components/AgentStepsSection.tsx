@@ -1,3 +1,4 @@
+// AgentStepsSection.tsx
 "use client";
 
 import React from 'react';
@@ -38,31 +39,31 @@ const ProcessCard = ({ step, title, icon: Icon, description }: ProcessCardProps)
   </motion.div>
 );
 
-const SpinProcess = () => {
+const AgentStepsSection = () => {
   const steps = [
     {
       step: "01",
-      title: "Create the Blueprint",
+      title: "Multimodal Input Analysis",
       icon: FileJson2,
-      description: "Define your agent's configuration using the lightweight SPIN Language. Specify models, data access patterns, and service integrations in a simple, declarative format."
+      description: "Input creative content across various modalities—visual, audio, textual—for comprehensive embedding generation and semantic analysis."
     },
     {
       step: "02",
-      title: "Create Pipeline Chain",
+      title: "Cultural Context Integration",
       icon: GitBranch,
-      description: "Design your workflow pipeline, connecting models, services, and data processing steps. Chain together components to create complex, multi-step processes."
+      description: "Enrich your content with cultural context from our knowledge graph, identifying historical influences and contemporary associations."
     },
     {
       step: "03",
-      title: "Containerize & Deploy",
+      title: "Creative Potential Scoring",
       icon: Container,
-      description: "SPIN automatically containerizes your bytesized code and deploys it securely. Runs in isolated environments with dynamic scaling and edge computing capabilities."
+      description: "Evaluate innovation, cultural resonance, and emotional depth through our creativity potential algorithms and psychological profiling."
     },
     {
       step: "04",
-      title: "Choose Interface",
+      title: "Generative Exploration",
       icon: Layout,
-      description: "Select your agent's interface type - chat UI for conversational interactions, feed for content streams, or bot for automated tasks."
+      description: "Transform your creative blueprint into varied outputs with our generative models that understand compositional narrative and emotional subtext."
     }
   ];
 
@@ -76,11 +77,10 @@ const SpinProcess = () => {
             className="space-y-4"
           >
             <h2 className="text-3xl font-medium text-gray-100">
-              Design Bespoke Agents
+              Creative Intelligence Process
             </h2>
             <p className="text-gray-400 leading-relaxed">
-              A simple four-step process to design, build, and deploy intelligent agents using SPIN Computer's
-              distributed operating system.
+              Our four-step process transforms raw creative input into contextually-aware, emotionally intelligent output through SPIN Computer's distributed creative intelligence system.
             </p>
           </motion.div>
         </div>
@@ -95,4 +95,4 @@ const SpinProcess = () => {
   );
 };
 
-export default SpinProcess;
+export default AgentStepsSection;
