@@ -190,7 +190,7 @@ const Economy = () => {
                     <div className="text-center max-w-3xl mx-auto space-y-4 mb-24">
                         <h2 className="text-3xl font-medium text-gray-100">Creative Asset Marketplace</h2>
                         <p className="text-gray-400 leading-relaxed">
-                            Explore our revolutionary marketplace for creative digital assets—enabling transparent collaboration, fair attribution, and monetization of creative processes.
+                            Explore our marketplace for creative digital assets—enabling transparent collaboration, fair attribution, and monetization of creative processes.
                         </p>
                     </div>
 

@@ -19,7 +19,7 @@ const FinalCTA = () => {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center space-y-8 max-w-3xl mx-auto">
           <h2 className="text-3xl font-medium text-gray-100">Join the Creative Intelligence Revolution</h2>
           <p className="text-gray-400 leading-relaxed">
-            Explore SPIN Computer's revolutionary creative intelligence platform—where human imagination meets artificial intelligence in a collaborative ecosystem.
+            Explore SPIN Computer's creative intelligence platform—where human imagination meets artificial intelligence in a collaborative ecosystem.
           </p>
           <div className="flex justify-center gap-4">
             <Button className="bg-white/10 hover:bg-white/15 text-white rounded-full px-8 py-6 text-lg backdrop-blur-sm border border-white/5">

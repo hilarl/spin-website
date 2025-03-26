@@ -39,7 +39,7 @@ const SpinAiExchangeSection = () => {
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <h2 className="text-3xl font-medium text-gray-100">Human-AI Creative Collaboration</h2>
             <p className="text-gray-400 leading-relaxed">
-              Explore our revolutionary framework for human-AI creative partnerships—enabling transparent contribution tracking, fair attribution, and novel creative exploration.
+              Explore our framework for human-AI creative partnerships—enabling transparent contribution tracking, fair attribution, and novel creative exploration.
             </p>
           </div>
           {/* Main Collaboration Overview */}
