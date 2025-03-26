@@ -8,7 +8,6 @@ import FeaturesTabsSection from '@/components/FeaturesTabsSection';
 import Footer from '@/components/Footer';
 import AgentStepsSection from '@/components/AgentStepsSection';
 import AgentTokenEconomySimulator from '@/components/Economy';
-import AgentShowcase from '@/components/agents/selector';
 import DataFlow from '@/components/DataFlow';
 
 export default function HomePage() {
@@ -18,7 +17,6 @@ export default function HomePage() {
       <AgentStepsSection />
       <DataFlow />
       <AgentDetailsSection />
-      <AgentShowcase />
       <AgentTokenEconomySimulator />
       <SpinStudioSection />
       <IntegrationToolsSection />
